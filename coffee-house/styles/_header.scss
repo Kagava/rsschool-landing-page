@@ -1,0 +1,59 @@
+@use "./constants" as const;
+
+$text-color: light-dark(const.$primary-color, const.$dark-primary-color);
+
+$logo-light: url("/coffee-house/imgs/header/logo.png");
+$logo-dark: url("/coffee-house/imgs/header/logo-dark.png");
+
+$menu-light: url("/coffee-house/imgs/svgs/header/coffee-cup.svg");
+$menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
+
+$menu-logo: light-dark($menu-light, $menu-dark);
+
+$border-color: light-dark(
+  const.$primary-bd-color,
+  const.$dark-primary-bd-color
+);
+
+.logo__link {
+  display: block;
+  width: 100px;
+  height: 60px;
+  background-image: light-dark($logo-light, $logo-dark);
+}
+
+.header__navigation-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: $text-color;
+}
+
+.header__menu-link-container {
+}
+
+.header__menu-link {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: $text-color;
+  transition: border 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+  &::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: $menu-logo;
+  }
+  &:hover {
+    border-bottom-color: $border-color;
+  }
+}

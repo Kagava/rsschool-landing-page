@@ -5,33 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/build/index/index.css" />
     <title>Document</title>
-    <style>
-      :root {
-        color-scheme: light dark;
-        --bg-color: light-dark(#e1d4c9, #292826);
-      }
-      :root:has(#theme-light:checked) {
-        color-scheme: light;
-      }
-      :root:has(#theme-dark:checked) {
-        color-scheme: dark;
-      }
-      .wrapper {
-        max-width: 1440px;
-        margin: auto;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg-color);
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header class="header">
       <div class="wrapper">
         <div class="header__logo">
-          <a href="index.html" class="logo__link">link</a>
+          <a href="index.html" class="logo__link"></a>
         </div>
         <div class="header__navigation-container">
           <nav class="header__navigation">
@@ -53,18 +33,20 @@
             </ul>
           </nav>
         </div>
-        <div class="headaer__settings">
-          <div class="header__themes">
-            <label for="" class="radio-light">
-              <input type="radio" name="shema" id="theme-light" checked />
-            </label>
-            <label for="" class="radio-dark">
-              <input type="radio" name="shema" id="theme-dark" />
-            </label>
+        <div class="header__menu-settings">
+          <div class="headaer__settings">
+            <div class="header__themes">
+              <label for="" class="radio-light">
+                <input type="radio" name="shema" id="theme-light" checked />
+              </label>
+              <label for="" class="radio-dark">
+                <input type="radio" name="shema" id="theme-dark" />
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="header__menu-link-container">
-          <a href="menu.html" class="header__menu-link">Menu</a>
+          <div class="header__menu-link-container">
+            <a href="menu.html" class="header__menu-link">Menu</a>
+          </div>
         </div>
       </div>
     </header>

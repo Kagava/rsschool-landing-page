@@ -7,8 +7,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  font-size: 10px;
-  font-family: Inter, san-serif;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -310,6 +308,77 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: Inter, sans-serif;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg-color: light-dark(#e1d4c9, #292826);
+}
+
+:root:has(#theme-light:checked) {
+  color-scheme: light;
+}
+
+:root:has(#theme-dark:checked) {
+  color-scheme: dark;
+}
+
+.logo__link {
+  display: block;
+  width: 100px;
+  height: 60px;
+  background-image: light-dark(url("/coffee-house/imgs/header/logo.png"), url("/coffee-house/imgs/header/logo-dark.png"));
+}
+
+.header__navigation-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: light-dark(#403f3d, #e1d4c9);
+}
+
+.header__menu-link {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: light-dark(#403f3d, #e1d4c9);
+  transition: border 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+.header__menu-link::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: light-dark(url("/coffee-house/imgs/svgs/header/coffee-cup.svg"), url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg"));
+}
+.header__menu-link:hover {
+  border-bottom-color: light-dark(#c1b6ad, #665f55);
 }
 
 /*# sourceMappingURL=index.css.map */
