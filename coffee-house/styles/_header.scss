@@ -11,8 +11,8 @@ $menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
 $menu-logo: light-dark($menu-light, $menu-dark);
 
 $border-color: light-dark(
-  const.$primary-bd-color,
-  const.$dark-primary-bd-color
+  const.$dark-primary-bd-color,
+  const.$primary-bd-color
 );
 
 $sun-light: url("/coffee-house/imgs/svgs/header/Sun.svg");
@@ -25,11 +25,29 @@ $moon-dark: url("/coffee-house/imgs/svgs/header/Moon.svg");
 
 $moon-icon: light-dark($moon-dark, $moon-light);
 
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo__link {
   display: block;
   width: 100px;
   height: 60px;
   background-image: light-dark($logo-light, $logo-dark);
+}
+
+.header__navigation-container {
+  flex-grow: 1;
+  padding: 0 280px;
+}
+
+.header__navigation-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .header__navigation-link {
@@ -38,6 +56,11 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   font-size: 1.6rem;
   line-height: 150%;
   color: $text-color;
+  transition: border 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom-color: $border-color;
+  }
 }
 
 .header__themes,
@@ -68,6 +91,14 @@ $moon-icon: light-dark($moon-dark, $moon-light);
       const.$dark-primary-bd-color
     );
   }
+}
+
+.header__menu-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 8px;
 }
 
 .header__menu-link {
