@@ -310,6 +310,11 @@ template {
   display: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
@@ -341,11 +346,29 @@ html {
   color-scheme: dark;
 }
 
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo__link {
   display: block;
   width: 100px;
   height: 60px;
   background-image: light-dark(url("/coffee-house/imgs/header/logo.png"), url("/coffee-house/imgs/header/logo-dark.png"));
+}
+
+.header__navigation-container {
+  flex-grow: 1;
+  padding: 0 280px;
+}
+
+.header__navigation-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .header__navigation-link {
@@ -354,6 +377,11 @@ html {
   font-size: 1.6rem;
   line-height: 150%;
   color: light-dark(#403f3d, #e1d4c9);
+  transition: border 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+.header__navigation-link:hover {
+  border-bottom-color: light-dark(#665f55, #c1b6ad);
 }
 
 .header__themes,
@@ -364,7 +392,7 @@ html {
 }
 
 .header__themes {
-  border: 1px solid light-dark(#c1b6ad, #665f55);
+  border: 1px solid light-dark(#665f55, #c1b6ad);
   border-radius: 100px;
   padding: 4px;
 }
@@ -381,6 +409,14 @@ html {
 }
 .header__radio-label:hover {
   background-color: light-dark(#c1b6ad, #665f55);
+}
+
+.header__menu-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 8px;
 }
 
 .header__menu-link {
@@ -402,7 +438,7 @@ html {
   background-image: light-dark(url("/coffee-house/imgs/svgs/header/coffee-cup.svg"), url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg"));
 }
 .header__menu-link:hover {
-  border-bottom-color: light-dark(#c1b6ad, #665f55);
+  border-bottom-color: light-dark(#665f55, #c1b6ad);
 }
 
 .radio-light {
