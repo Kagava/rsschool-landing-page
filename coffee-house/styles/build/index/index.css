@@ -356,10 +356,34 @@ html {
   color: light-dark(#403f3d, #e1d4c9);
 }
 
+.header__themes,
 .header__menu-link {
   display: inline-flex;
   flex-direction: row;
   column-gap: 8px;
+}
+
+.header__themes {
+  border: 1px solid light-dark(#c1b6ad, #665f55);
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.header__radio-label {
+  cursor: pointer;
+  display: block;
+  width: 36px;
+  height: 36px;
+  transition: background-color ease-in-out 0.5s;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.header__radio-label:hover {
+  background-color: light-dark(#c1b6ad, #665f55);
+}
+
+.header__menu-link {
   justify-content: center;
   align-items: center;
   font-style: normal;
@@ -379,6 +403,21 @@ html {
 }
 .header__menu-link:hover {
   border-bottom-color: light-dark(#c1b6ad, #665f55);
+}
+
+.radio-light {
+  background-image: url("/coffee-house/imgs/svgs/header/Sun.svg");
+  background-color: light-dark(#b0907a, transparent);
+}
+
+.radio-dark {
+  background-image: light-dark(url("/coffee-house/imgs/svgs/header/Moon.svg"), url("/coffee-house/imgs/svgs/header/Moon-light.svg"));
+  background-color: light-dark(transparent, #b0907a);
+}
+
+#theme-light,
+#theme-dark {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

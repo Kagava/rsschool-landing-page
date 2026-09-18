@@ -15,6 +15,16 @@ $border-color: light-dark(
   const.$dark-primary-bd-color
 );
 
+$sun-light: url("/coffee-house/imgs/svgs/header/Sun.svg");
+$sun-dark: url("/coffee-house/imgs/svgs/header/Sun-dark.svg");
+
+$sun-icon: $sun-light;
+
+$moon-light: url("/coffee-house/imgs/svgs/header/Moon-light.svg");
+$moon-dark: url("/coffee-house/imgs/svgs/header/Moon.svg");
+
+$moon-icon: light-dark($moon-dark, $moon-light);
+
 .logo__link {
   display: block;
   width: 100px;
@@ -30,13 +40,37 @@ $border-color: light-dark(
   color: $text-color;
 }
 
-.header__menu-link-container {
-}
-
+.header__themes,
 .header__menu-link {
   display: inline-flex;
   flex-direction: row;
   column-gap: 8px;
+}
+
+.header__themes {
+  border: 1px solid $border-color;
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.header__radio-label {
+  cursor: pointer;
+  display: block;
+  width: 36px;
+  height: 36px;
+  transition: background-color ease-in-out 0.5s;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  &:hover {
+    background-color: light-dark(
+      const.$primary-bd-color,
+      const.$dark-primary-bd-color
+    );
+  }
+}
+
+.header__menu-link {
   justify-content: center;
   align-items: center;
   font-style: normal;
@@ -46,6 +80,7 @@ $border-color: light-dark(
   color: $text-color;
   transition: border 0.3s ease-in-out;
   border-bottom: 2px solid transparent;
+
   &::after {
     display: block;
     width: 20px;
@@ -53,7 +88,23 @@ $border-color: light-dark(
     content: "";
     background-image: $menu-logo;
   }
+
   &:hover {
     border-bottom-color: $border-color;
   }
+}
+
+.radio-light {
+  background-image: $sun-icon;
+  background-color: light-dark(const.$accent-color, transparent);
+}
+
+.radio-dark {
+  background-image: $moon-icon;
+  background-color: light-dark(transparent, const.$accent-color);
+}
+
+#theme-light,
+#theme-dark {
+  display: none;
 }
