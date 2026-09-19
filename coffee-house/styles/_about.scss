@@ -1,5 +1,9 @@
 @use "./constants" as const;
 
+.about {
+  margin-top: 100px;
+}
+
 .about__container {
   display: flex;
   flex-direction: column;

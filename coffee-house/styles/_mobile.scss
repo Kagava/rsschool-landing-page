@@ -10,6 +10,10 @@ $google-dark: url("/coffee-house/imgs/svgs/mobile/google-dark.svg");
 $google-image: light-dark($google-light, $google-dark);
 $google-image--hovered: light-dark($google-dark, $google-light);
 
+.mobile {
+  margin-top: 100px;
+}
+
 .mobile__container {
   display: flex;
   flex-direction: row;

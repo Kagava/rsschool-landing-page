@@ -25,6 +25,10 @@ $moon-dark: url("/coffee-house/imgs/svgs/header/Moon.svg");
 
 $moon-icon: light-dark($moon-dark, $moon-light);
 
+.header {
+  margin-top: 20px;
+}
+
 .header__container {
   display: flex;
   flex-direction: row;

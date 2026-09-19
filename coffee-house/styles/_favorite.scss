@@ -10,6 +10,10 @@ $right-arrow-dark: url("/coffee-house/imgs/svgs/favorite/arrow-right-dark.svg");
 $right-arrow: light-dark($right-arrow-light, $right-arrow-dark);
 $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
 
+.favorite {
+  margin-top: 100px;
+}
+
 .favorite__container {
   display: flex;
   flex-direction: column;

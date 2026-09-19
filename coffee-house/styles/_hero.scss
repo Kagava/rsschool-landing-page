@@ -5,6 +5,14 @@ $menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
 
 $menu-logo: light-dark($menu-light, $menu-dark);
 
+.hero {
+  margin-top: 20px;
+}
+
+.hero__container {
+  border-radius: 40px;
+}
+
 .hero__offer {
   display: flex;
   flex-direction: column;
