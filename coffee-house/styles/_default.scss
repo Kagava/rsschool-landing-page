@@ -1,6 +1,12 @@
+@use "./constants" as const;
+
 html {
   font-size: 10px;
   font-family: Inter, sans-serif;
+}
+
+body {
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
 }
 
 .wrapper {
