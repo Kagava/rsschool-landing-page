@@ -526,4 +526,104 @@ html {
   display: block;
 }
 
+.favorite__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.favorite__heading {
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 125%;
+  text-align: center;
+  color: light-dark(#403f3d, #e1d4c9);
+}
+.favorite__heading > span {
+  color: #b0907a;
+}
+
+.favorite__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__card {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.slider-arrow {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid light-dark(#665f55, #c1b6ad);
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.slider-arrow:hover {
+  border-color: light-dark(#c1b6ad, #665f55);
+  background-color: light-dark(#403f3d, #e1d4c9);
+}
+
+.slider__left-arrow {
+  background-image: light-dark(url("/coffee-house/imgs/svgs/favorite/arrow-left.svg"), url("/coffee-house/imgs/svgs/favorite/arrow-left-dark.svg"));
+}
+.slider__left-arrow:hover {
+  background-image: light-dark(url("/coffee-house/imgs/svgs/favorite/arrow-left-dark.svg"), url("/coffee-house/imgs/svgs/favorite/arrow-left.svg"));
+}
+
+.slider__right-arrow {
+  background-image: light-dark(url("/coffee-house/imgs/svgs/favorite/arrow-right.svg"), url("/coffee-house/imgs/svgs/favorite/arrow-right-dark.svg"));
+}
+.slider__right-arrow:hover {
+  background-image: light-dark(url("/coffee-house/imgs/svgs/favorite/arrow-right-dark.svg"), url("/coffee-house/imgs/svgs/favorite/arrow-right.svg"));
+}
+
+.card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image {
+  width: clamp(348px, 26vw, 480px);
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+}
+
+.card__heading,
+.card__price {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 125%;
+  text-align: center;
+  color: light-dark(#403f3d, #e1d4c9);
+}
+
+.card__description {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  text-align: center;
+  color: light-dark(#403f3d, #e1d4c9);
+}
+
+.favorite__slider-pages {
+  height: 4px;
+  background-color: black;
+}
+
 /*# sourceMappingURL=index.css.map */
