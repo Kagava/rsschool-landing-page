@@ -41,13 +41,13 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 
 .header__navigation-container {
   flex-grow: 1;
-  padding: 0 280px;
+  padding: 0 50px;
 }
 
 .header__navigation-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .header__navigation-link {
