@@ -1,0 +1,12 @@
+@use "./constants" as const;
+
+.main__heading {
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 125%;
+  text-align: center;
+  & > span {
+    font-style: italic;
+    color: const.$accent-color;
+  }
+}
