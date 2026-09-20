@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch index.scss styles/build/index/index.css",
+    "style": "sass --watch menu.scss styles/build/menu/menu.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
