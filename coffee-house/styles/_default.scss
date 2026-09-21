@@ -1,0 +1,30 @@
+@use "./constants" as const;
+
+html {
+  font-size: 10px;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
+}
+
+.wrapper {
+  box-sizing: border-box;
+  max-width: 1440px;
+  padding: 0px 40px;
+  margin: auto;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg-color: light-dark(#e1d4c9, #292826);
+}
+
+:root:has(#theme-light:checked) {
+  color-scheme: light;
+}
+
+:root:has(#theme-dark:checked) {
+  color-scheme: dark;
+}

@@ -1,0 +1,172 @@
+@use "./constants" as const;
+
+.main__heading {
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 125%;
+  text-align: center;
+  max-width: 800px;
+  & > span {
+    font-style: italic;
+    color: const.$accent-color;
+  }
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.main-heading__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.main__tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 361px;
+  column-gap: 16px;
+}
+
+.menu__tag {
+  cursor: pointer;
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  column-gap: 8px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+  border: 1px solid const.$primary-bd-color;
+  border-radius: 100px;
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
+  &::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: light-dark(
+      const.$primary-bd-color,
+      const.$dark-primary-bd-color
+    );
+  }
+}
+
+.tag__coffee {
+  &::before {
+    content: "☕";
+  }
+}
+
+.tag__tea {
+  &::before {
+    content: "";
+    background-image: url("/coffee-house/imgs/menu/tags/teapot.png");
+  }
+}
+
+.tag__desert {
+  &::before {
+    content: "🍰";
+  }
+}
+
+.menu__tag.tag_active {
+  cursor: default;
+  background-color: light-dark(
+    const.$dark-primary-bd-color,
+    const.$dark-container-color
+  );
+  color: const.$dark-primary-color;
+  &::before {
+    background-color: light-dark(const.$inverse-color, const.$dark-page-color);
+  }
+  border: 0px;
+}
+
+.menu__card {
+  cursor: pointer;
+  width: 310px;
+  height: 506px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid
+    light-dark(const.$primary-bd-color, const.$dark-primary-bd-color);
+  border-radius: 40px;
+  &:hover > * > .card__image {
+    transform: scale(0.9);
+  }
+}
+
+.card__info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.card__image-container {
+  width: 310px;
+  height: 310px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.card__image {
+  width: 340px;
+  height: 340px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__text-info {
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+}
+
+.crad__heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 125%;
+}
+
+.card__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.card__price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 125%;
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+}
+
+.main__menu-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}

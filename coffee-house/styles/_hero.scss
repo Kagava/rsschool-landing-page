@@ -1,0 +1,76 @@
+@use "./constants" as const;
+
+$menu-light: url("/coffee-house/imgs/svgs/header/coffee-cup.svg");
+$menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
+
+$menu-logo: light-dark($menu-light, $menu-dark);
+
+.hero {
+  margin-top: 20px;
+}
+
+.hero__container {
+  border-radius: 40px;
+}
+
+.hero__offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 100px clamp(100px, 40vw, 730px) 100px 100px;
+  gap: 40px;
+  //clamp
+}
+
+.hero__header {
+  font-weight: 600;
+  font-size: 7.2rem;
+  line-height: 105%;
+  color: const.$inverse-color;
+  & > span {
+    font-style: italic;
+    color: const.$accent-color;
+  }
+}
+
+.hero__info {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: const.$inverse-color;
+}
+
+.hero__link-container {
+  box-sizing: border-box;
+  width: 200px;
+  height: 64px;
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
+  border-radius: 100px;
+}
+
+.hero__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  text-align: center;
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+
+  &::after {
+    display: none;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: $menu-logo;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+}
