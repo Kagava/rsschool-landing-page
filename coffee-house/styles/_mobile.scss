@@ -1,12 +1,12 @@
 @use "./constants" as const;
 
-$apple-light: url("/coffee-house/imgs/svgs/mobile/apple-light.svg");
-$apple-dark: url("/coffee-house/imgs/svgs/mobile/apple-dark.svg");
+$apple-light: url("imgs/svgs/mobile/apple-light.svg");
+$apple-dark: url("imgs/svgs/mobile/apple-dark.svg");
 $apple-image: light-dark($apple-light, $apple-dark);
 $apple-image--hovered: light-dark($apple-dark, $apple-light);
 
-$google-light: url("/coffee-house/imgs/svgs/mobile/google-light.svg");
-$google-dark: url("/coffee-house/imgs/svgs/mobile/google-dark.svg");
+$google-light: url("imgs/svgs/mobile/google-light.svg");
+$google-dark: url("imgs/svgs/mobile/google-dark.svg");
 $google-image: light-dark($google-light, $google-dark);
 $google-image--hovered: light-dark($google-dark, $google-light);
 

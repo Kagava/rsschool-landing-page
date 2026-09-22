@@ -1,7 +1,7 @@
 @use "./constants" as const;
 
-$menu-light: url("/coffee-house/imgs/svgs/header/coffee-cup.svg");
-$menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
+$menu-light: url("imgs/svgs/header/coffee-cup.svg");
+$menu-dark: url("imgs/svgs/header/coffee-cup-dark.svg");
 
 $menu-logo: light-dark($menu-light, $menu-dark);
 

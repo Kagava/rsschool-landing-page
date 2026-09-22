@@ -1,12 +1,12 @@
 @use "./constants" as const;
 
-$left-arrow-light: url("/coffee-house/imgs/svgs/favorite/arrow-left.svg");
-$left-arrow-dark: url("/coffee-house/imgs/svgs/favorite/arrow-left-dark.svg");
+$left-arrow-light: url("imgs/svgs/favorite/arrow-left.svg");
+$left-arrow-dark: url("imgs/svgs/favorite/arrow-left-dark.svg");
 $left-arrow: light-dark($left-arrow-light, $left-arrow-dark);
 $left-arrow--hovered: light-dark($left-arrow-dark, $left-arrow-light);
 
-$right-arrow-light: url("/coffee-house/imgs/svgs/favorite/arrow-right.svg");
-$right-arrow-dark: url("/coffee-house/imgs/svgs/favorite/arrow-right-dark.svg");
+$right-arrow-light: url("imgs/svgs/favorite/arrow-right.svg");
+$right-arrow-dark: url("imgs/svgs/favorite/arrow-right-dark.svg");
 $right-arrow: light-dark($right-arrow-light, $right-arrow-dark);
 $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
 

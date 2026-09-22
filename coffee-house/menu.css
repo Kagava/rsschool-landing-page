@@ -383,7 +383,7 @@ body {
   display: block;
   width: 100px;
   height: 60px;
-  background-image: light-dark(url("/coffee-house/imgs/header/logo.png"), url("/coffee-house/imgs/header/logo-dark.png"));
+  background-image: light-dark(url("imgs/header/logo.png"), url("imgs/header/logo-dark.png"));
 }
 
 .header__navigation-container {
@@ -466,19 +466,19 @@ body {
   width: 20px;
   height: 20px;
   content: "";
-  background-image: light-dark(url("/coffee-house/imgs/svgs/header/coffee-cup.svg"), url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg"));
+  background-image: light-dark(url("imgs/svgs/header/coffee-cup.svg"), url("imgs/svgs/header/coffee-cup-dark.svg"));
 }
 .header__menu-link:hover {
   border-bottom-color: light-dark(#665f55, #c1b6ad);
 }
 
 .radio-light {
-  background-image: url("/coffee-house/imgs/svgs/header/Sun.svg");
+  background-image: url("imgs/svgs/header/Sun.svg");
   background-color: light-dark(#b0907a, transparent);
 }
 
 .radio-dark {
-  background-image: light-dark(url("/coffee-house/imgs/svgs/header/Moon.svg"), url("/coffee-house/imgs/svgs/header/Moon-light.svg"));
+  background-image: light-dark(url("imgs/svgs/header/Moon.svg"), url("imgs/svgs/header/Moon-light.svg"));
   background-color: light-dark(transparent, #b0907a);
 }
 
@@ -615,7 +615,7 @@ body {
 
 .tag__tea::before {
   content: "";
-  background-image: url("/coffee-house/imgs/menu/tags/teapot.png");
+  background-image: url("imgs/menu/tags/teapot.png");
 }
 
 .tag__desert::before {
@@ -814,11 +814,11 @@ body {
 }
 
 .contact__place::before {
-  background-image: url("/coffee-house/imgs/svgs/footer/pin-alt.svg");
+  background-image: url("imgs/svgs/footer/pin-alt.svg");
 }
 
 .contact__phone::before {
-  background-image: url("/imgs/svgs/footer/phone.svg");
+  background-image: url("imgs/svgs/footer/phone.svg");
 }
 
 .contact__time::before {
@@ -850,24 +850,24 @@ body {
 }
 
 .tw {
-  background-image: url("/coffee-house/imgs/svgs/footer/tw.svg");
+  background-image: url("imgs/svgs/footer/tw.svg");
 }
 .tw:hover {
-  background-image: light-dark(url("/coffee-house/imgs/svgs/footer/dark/tw.svg"), url("/coffee-house/imgs/svgs/footer/tw.svg"));
+  background-image: light-dark(url("imgs/svgs/footer/dark/tw.svg"), url("imgs/svgs/footer/tw.svg"));
 }
 
 .face {
-  background-image: url("/coffee-house/imgs/svgs/footer/face.svg");
+  background-image: url("imgs/svgs/footer/face.svg");
 }
 .face:hover {
-  background-image: light-dark(url("/coffee-house/imgs/svgs/footer/dark/face.svg"), url("/coffee-house/imgs/svgs/footer/face.svg"));
+  background-image: light-dark(url("imgs/svgs/footer/dark/face.svg"), url("imgs/svgs/footer/face.svg"));
 }
 
 .inst {
-  background-image: url("/coffee-house/imgs/svgs/footer/inst.svg");
+  background-image: url("imgs/svgs/footer/inst.svg");
 }
 .inst:hover {
-  background-image: light-dark(url("/coffee-house/imgs/svgs/footer/dark/inst.svg"), url("/coffee-house/imgs/svgs/footer/inst.svg"));
+  background-image: light-dark(url("imgs/svgs/footer/dark/inst.svg"), url("imgs/svgs/footer/inst.svg"));
 }
 
 /*# sourceMappingURL=menu.css.map */
