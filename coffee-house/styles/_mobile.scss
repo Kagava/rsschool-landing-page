@@ -45,7 +45,7 @@ $google-image--hovered: light-dark($google-dark, $google-light);
     font-style: italic;
     color: const.$accent-color;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 3.2rem;
   }
 }

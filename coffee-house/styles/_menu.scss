@@ -10,6 +10,10 @@
     font-style: italic;
     color: const.$accent-color;
   }
+
+  @media (max-width: 767px) {
+    font-size: 3.2rem;
+  }
 }
 
 .main__container {
@@ -169,4 +173,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 40px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    & > *:nth-child(n + 5) {
+      display: none;
+    }
+  }
 }
