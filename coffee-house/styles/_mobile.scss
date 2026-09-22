@@ -20,12 +20,19 @@ $google-image--hovered: light-dark($google-dark, $google-light);
   gap: 100px;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 455px) {
+    gap: 40px;
+  }
 }
 
 .mobile__info {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 630px;
 }
 
 .mobile__heading {
@@ -37,6 +44,9 @@ $google-image--hovered: light-dark($google-dark, $google-light);
   & > span {
     font-style: italic;
     color: const.$accent-color;
+  }
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
   }
 }
 
@@ -54,6 +64,7 @@ $google-image--hovered: light-dark($google-dark, $google-light);
 .mobile__download-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 

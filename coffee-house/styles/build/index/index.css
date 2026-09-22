@@ -855,11 +855,22 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .mobile__container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 455px) {
+  .mobile__container {
+    gap: 40px;
+  }
+}
 
 .mobile__info {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 630px;
 }
 
 .mobile__heading {
@@ -872,6 +883,11 @@ body {
 .mobile__heading > span {
   font-style: italic;
   color: #b0907a;
+}
+@media (max-width: 768px) {
+  .mobile__heading {
+    font-size: 3.2rem;
+  }
 }
 
 .mobile__description {
@@ -888,6 +904,7 @@ body {
 .mobile__download-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -1099,8 +1116,7 @@ body {
   background-image: light-dark(url("/coffee-house/imgs/svgs/footer/dark/inst.svg"), url("/coffee-house/imgs/svgs/footer/inst.svg"));
 }
 
-.footer,
-.mobile {
+.footer {
   display: none;
 }
 

@@ -8,10 +8,6 @@
 @use "styles/mobile";
 @use "styles/footer";
 
-.footer,
-.hero,
-.favorite,
-.about,
-.mobile {
+.footer {
   display: none;
 }
