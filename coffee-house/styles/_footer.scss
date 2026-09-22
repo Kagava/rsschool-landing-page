@@ -7,7 +7,7 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: 530px 530px;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 100px;
   background-color: const.$container-color;
