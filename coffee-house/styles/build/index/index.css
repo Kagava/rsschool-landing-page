@@ -638,12 +638,22 @@ body {
   font-style: italic;
   color: #b0907a;
 }
+@media (max-width: 768px) {
+  .favorite__heading {
+    font-size: 3.2rem;
+  }
+}
 
 .favorite__slider {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .favorite__slider {
+    justify-content: center;
+  }
 }
 
 .slider__card {
@@ -666,6 +676,11 @@ body {
 .slider-arrow:hover {
   border-color: light-dark(#c1b6ad, #665f55);
   background-color: light-dark(#403f3d, #e1d4c9);
+}
+@media (max-width: 768px) {
+  .slider-arrow {
+    display: none;
+  }
 }
 
 .slider__left-arrow {
@@ -1024,7 +1039,6 @@ body {
 }
 
 .footer,
-.favorite,
 .about,
 .mobile {
   display: none;
