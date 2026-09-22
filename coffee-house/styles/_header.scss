@@ -2,11 +2,11 @@
 
 $text-color: light-dark(const.$primary-color, const.$dark-primary-color);
 
-$logo-light: url("/coffee-house/imgs/header/logo.png");
-$logo-dark: url("/coffee-house/imgs/header/logo-dark.png");
+$logo-light: url("imgs/header/logo.png");
+$logo-dark: url("imgs/header/logo-dark.png");
 
-$menu-light: url("/coffee-house/imgs/svgs/header/coffee-cup.svg");
-$menu-dark: url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg");
+$menu-light: url("imgs/svgs/header/coffee-cup.svg");
+$menu-dark: url("imgs/svgs/header/coffee-cup-dark.svg");
 
 $menu-logo: light-dark($menu-light, $menu-dark);
 
@@ -15,13 +15,13 @@ $border-color: light-dark(
   const.$primary-bd-color
 );
 
-$sun-light: url("/coffee-house/imgs/svgs/header/Sun.svg");
-$sun-dark: url("/coffee-house/imgs/svgs/header/Sun-dark.svg");
+$sun-light: url("imgs/svgs/header/Sun.svg");
+$sun-dark: url("imgs/svgs/header/Sun-dark.svg");
 
 $sun-icon: $sun-light;
 
-$moon-light: url("/coffee-house/imgs/svgs/header/Moon-light.svg");
-$moon-dark: url("/coffee-house/imgs/svgs/header/Moon.svg");
+$moon-light: url("imgs/svgs/header/Moon-light.svg");
+$moon-dark: url("imgs/svgs/header/Moon.svg");
 
 $moon-icon: light-dark($moon-dark, $moon-light);
 

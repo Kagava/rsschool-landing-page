@@ -95,13 +95,13 @@
 
 .contact__place {
   &::before {
-    background-image: url("/coffee-house/imgs/svgs/footer/pin-alt.svg");
+    background-image: url("imgs/svgs/footer/pin-alt.svg");
   }
 }
 
 .contact__phone {
   &::before {
-    background-image: url("/imgs/svgs/footer/phone.svg");
+    background-image: url("imgs/svgs/footer/phone.svg");
   }
 }
 .contact__time {
@@ -140,31 +140,31 @@
 }
 
 .tw {
-  background-image: url("/coffee-house/imgs/svgs/footer/tw.svg");
+  background-image: url("imgs/svgs/footer/tw.svg");
   &:hover {
     background-image: light-dark(
-      url("/coffee-house/imgs/svgs/footer/dark/tw.svg"),
-      url("/coffee-house/imgs/svgs/footer/tw.svg")
+      url("imgs/svgs/footer/dark/tw.svg"),
+      url("imgs/svgs/footer/tw.svg")
     );
   }
 }
 
 .face {
-  background-image: url("/coffee-house/imgs/svgs/footer/face.svg");
+  background-image: url("imgs/svgs/footer/face.svg");
   &:hover {
     background-image: light-dark(
-      url("/coffee-house/imgs/svgs/footer/dark/face.svg"),
-      url("/coffee-house/imgs/svgs/footer/face.svg")
+      url("imgs/svgs/footer/dark/face.svg"),
+      url("imgs/svgs/footer/face.svg")
     );
   }
 }
 
 .inst {
-  background-image: url("/coffee-house/imgs/svgs/footer/inst.svg");
+  background-image: url("imgs/svgs/footer/inst.svg");
   &:hover {
     background-image: light-dark(
-      url("/coffee-house/imgs/svgs/footer/dark/inst.svg"),
-      url("/coffee-house/imgs/svgs/footer/inst.svg")
+      url("imgs/svgs/footer/dark/inst.svg"),
+      url("imgs/svgs/footer/inst.svg")
     );
   }
 }
