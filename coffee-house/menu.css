@@ -818,11 +818,11 @@ body {
 }
 
 .contact__phone::before {
-  background-image: url("/coffee-house/imgs/svgs/footer/phone.svg");
+  background-image: url("/imgs/svgs/footer/phone.svg");
 }
 
 .contact__time::before {
-  background-image: url("/coffee-house/imgs/svgs/footer/clock.svg");
+  background-image: url("imgs/svgs/footer/clock.svg");
 }
 
 .footer__media {
