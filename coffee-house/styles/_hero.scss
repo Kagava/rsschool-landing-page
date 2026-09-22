@@ -11,6 +11,17 @@ $menu-logo: light-dark($menu-light, $menu-dark);
 
 .hero__container {
   border-radius: 40px;
+  padding: 100px;
+  @media (max-width: 767px) {
+    padding: 60px;
+  }
+  @media (max-width: 570px) {
+    padding: 60px 16px;
+  }
+}
+
+.hero__content {
+  max-width: 530px;
 }
 
 .hero__offer {
@@ -18,9 +29,7 @@ $menu-logo: light-dark($menu-light, $menu-dark);
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 100px clamp(100px, 40vw, 730px) 100px 100px;
   gap: 40px;
-  //clamp
 }
 
 .hero__header {
@@ -31,6 +40,9 @@ $menu-logo: light-dark($menu-light, $menu-dark);
   & > span {
     font-style: italic;
     color: const.$accent-color;
+  }
+  @media (max-width: 767px) {
+    font-size: 4.2rem;
   }
 }
 
@@ -68,9 +80,13 @@ $menu-logo: light-dark($menu-light, $menu-dark);
     width: 20px;
     height: 20px;
     background-image: $menu-logo;
+    @media (max-width: 767px) {
+      display: block;
+    }
   }
-
-  &:hover::after {
-    display: block;
+  @media (min-width: 767px) {
+    &:hover::after {
+      display: block;
+    }
   }
 }

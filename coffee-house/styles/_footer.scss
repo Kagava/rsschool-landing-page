@@ -7,13 +7,24 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: 530px 530px;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 100px;
   background-color: const.$container-color;
   border-radius: 40px;
   padding: 100px;
   color: const.$inverse-color;
+  @media (max-width: 1000px) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto;
+  }
+  @media (max-width: 767px) {
+    padding: 60px 100px;
+  }
+  @media (max-width: 455px) {
+    padding: 60px 16px;
+    gap: 40px;
+  }
 }
 
 .footer__info {
@@ -31,6 +42,9 @@
   & > span {
     font-style: italic;
     color: const.$accent-color;
+  }
+  @media (max-width: 767px) {
+    font-size: 3.2rem;
   }
 }
 

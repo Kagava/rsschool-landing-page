@@ -29,6 +29,9 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
     font-style: italic;
     color: const.$accent-color;
   }
+  @media (max-width: 767px) {
+    font-size: 3.2rem;
+  }
 }
 
 .favorite__slider {
@@ -36,6 +39,9 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
 }
 
 .slider__card {
@@ -64,6 +70,10 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
       const.$dark-container-color,
       const.$page-color
     );
+  }
+
+  @media (max-width: 767px) {
+    display: none;
   }
 }
 
