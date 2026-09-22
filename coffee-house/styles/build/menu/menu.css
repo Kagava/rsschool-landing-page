@@ -579,12 +579,14 @@ body {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 150%;
+  transition: all 0.5s ease-in-out;
   color: light-dark(#403f3d, #e1d4c9);
   border: 1px solid #c1b6ad;
   border-radius: 100px;
   background-color: light-dark(#e1d4c9, #292826);
 }
 .menu__tag::before {
+  transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,6 +597,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: light-dark(#c1b6ad, #665f55);
+}
+.menu__tag:hover {
+  background-color: light-dark(#665f55, #403f3d);
+  color: #e1d4c9;
+}
+.menu__tag:hover::before {
+  background-color: light-dark(#e1d4c9, #292826);
+}
+.menu__tag:hover {
+  border: 0px;
 }
 
 .tag__coffee::before {

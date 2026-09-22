@@ -52,11 +52,13 @@
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 150%;
+  transition: all 0.5s ease-in-out;
   color: light-dark(const.$primary-color, const.$dark-primary-color);
   border: 1px solid const.$primary-bd-color;
   border-radius: 100px;
   background-color: light-dark(const.$page-color, const.$dark-page-color);
   &::before {
+    transition: all 0.5s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +72,21 @@
       const.$primary-bd-color,
       const.$dark-primary-bd-color
     );
+  }
+
+  &:hover {
+    background-color: light-dark(
+      const.$dark-primary-bd-color,
+      const.$dark-container-color
+    );
+    color: const.$dark-primary-color;
+    &::before {
+      background-color: light-dark(
+        const.$inverse-color,
+        const.$dark-page-color
+      );
+    }
+    border: 0px;
   }
 }
 
