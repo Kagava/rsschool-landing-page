@@ -7,8 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch menu.scss styles/build/menu/menu.css",
-    "style-1": "sass --watch index.scss styles/build/index/index.css",
+    "style": "sass --watch menu.scss menu.css",
+    "style-1": "sass --watch index.scss index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
