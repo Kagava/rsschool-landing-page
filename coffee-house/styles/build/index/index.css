@@ -995,6 +995,23 @@ body {
   padding: 100px;
   color: #e1d4c9;
 }
+@media (max-width: 1000px) {
+  .footer__container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 60px 100px;
+  }
+}
+@media (max-width: 455px) {
+  .footer__container {
+    padding: 60px 16px;
+    gap: 40px;
+  }
+}
 
 .footer__info {
   display: flex;
@@ -1012,6 +1029,11 @@ body {
 .footer__heading > span {
   font-style: italic;
   color: #b0907a;
+}
+@media (max-width: 768px) {
+  .footer__heading {
+    font-size: 3.2rem;
+  }
 }
 
 .footer__contact {
@@ -1114,10 +1136,6 @@ body {
 }
 .inst:hover {
   background-image: light-dark(url("/coffee-house/imgs/svgs/footer/dark/inst.svg"), url("/coffee-house/imgs/svgs/footer/inst.svg"));
-}
-
-.footer {
-  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */
