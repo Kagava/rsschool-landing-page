@@ -348,6 +348,11 @@ body {
   padding: 0px 40px;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+}
 
 :root {
   color-scheme: light dark;
@@ -526,6 +531,21 @@ body {
 
 .hero__container {
   border-radius: 40px;
+  padding: 100px;
+}
+@media (max-width: 768px) {
+  .hero__container {
+    padding: 60px;
+  }
+}
+@media (max-width: 570px) {
+  .hero__container {
+    padding: 60px 16px;
+  }
+}
+
+.hero__content {
+  max-width: 530px;
 }
 
 .hero__offer {
@@ -533,7 +553,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 100px clamp(100px, 40vw, 730px) 100px 100px;
   gap: 40px;
 }
 
@@ -546,6 +565,11 @@ body {
 .hero__header > span {
   font-style: italic;
   color: #b0907a;
+}
+@media (max-width: 767px) {
+  .hero__header {
+    font-size: 4.2rem;
+  }
 }
 
 .hero__info {
@@ -583,8 +607,15 @@ body {
   height: 20px;
   background-image: light-dark(url("/coffee-house/imgs/svgs/header/coffee-cup.svg"), url("/coffee-house/imgs/svgs/header/coffee-cup-dark.svg"));
 }
-.hero__link:hover::after {
-  display: block;
+@media (max-width: 768px) {
+  .hero__link::after {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .hero__link:hover::after {
+    display: block;
+  }
 }
 
 .favorite {
@@ -993,7 +1024,6 @@ body {
 }
 
 .footer,
-.hero,
 .favorite,
 .about,
 .mobile {
