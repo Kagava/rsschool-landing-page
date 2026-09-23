@@ -52,7 +52,7 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -148,7 +148,7 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 }
 
 .header__menu-link-container {
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -160,7 +160,7 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   height: 44px;
   display: none;
   position: relative;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: block;
   }
 }

@@ -29,7 +29,7 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
     font-style: italic;
     color: const.$accent-color;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     font-size: 3.2rem;
   }
 }
@@ -39,7 +39,7 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     justify-content: center;
   }
 }
@@ -72,7 +72,7 @@ $right-arrow--hovered: light-dark($right-arrow-dark, $right-arrow-light);
     );
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }

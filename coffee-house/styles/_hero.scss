@@ -12,7 +12,7 @@ $menu-logo: light-dark($menu-light, $menu-dark);
 .hero__container {
   border-radius: 40px;
   padding: 100px;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 60px;
   }
   @media (max-width: 570px) {
@@ -41,7 +41,7 @@ $menu-logo: light-dark($menu-light, $menu-dark);
     font-style: italic;
     color: const.$accent-color;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     font-size: 4.2rem;
   }
 }
@@ -80,11 +80,11 @@ $menu-logo: light-dark($menu-light, $menu-dark);
     width: 20px;
     height: 20px;
     background-image: $menu-logo;
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
-  @media (min-width: 767px) {
+  @media (min-width: 768px) {
     &:hover::after {
       display: block;
     }
