@@ -1,0 +1,146 @@
+@use "./constants" as const;
+
+$apple-light: url("imgs/svgs/mobile/apple-light.svg");
+$apple-dark: url("imgs/svgs/mobile/apple-dark.svg");
+$apple-image: light-dark($apple-light, $apple-dark);
+$apple-image--hovered: light-dark($apple-dark, $apple-light);
+
+$google-light: url("imgs/svgs/mobile/google-light.svg");
+$google-dark: url("imgs/svgs/mobile/google-dark.svg");
+$google-image: light-dark($google-light, $google-dark);
+$google-image--hovered: light-dark($google-dark, $google-light);
+
+.mobile {
+  margin-top: 100px;
+}
+
+.mobile__container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 455px) {
+    gap: 40px;
+  }
+}
+
+.mobile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 630px;
+}
+
+.mobile__heading {
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 125%;
+  letter-spacing: 1px;
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+  & > span {
+    font-style: italic;
+    color: const.$accent-color;
+  }
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
+  }
+}
+
+.mobile__description {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+}
+
+.mobile__image {
+  width: clamp(348px, 35vw, 630vw);
+}
+
+.mobile__download-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mobile__link {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 64px;
+  padding-left: 20px;
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
+  border-radius: 100px;
+  transition: all 0.5s ease-in-out;
+  font-weight: 600;
+  border: 1px solid
+    light-dark(const.$dark-primary-bd-color, const.$primary-bd-color);
+  &::before {
+    display: block;
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    background-color: light-dark(const.$dark-page-color, const.$page-color);
+  }
+}
+
+.mobile__apple {
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+  &::before {
+    background-image: $apple-image;
+  }
+  &:hover {
+    color: light-dark(const.$dark-primary-color, const.$primary-color);
+    &::before {
+      background-image: $apple-image--hovered;
+    }
+  }
+}
+
+.mobile__android {
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+  &::before {
+    background-image: $google-image;
+  }
+  &:hover {
+    color: light-dark(const.$dark-primary-color, const.$primary-color);
+    &::before {
+      background-image: $google-image--hovered;
+    }
+  }
+}
+
+.mobile__app-caption {
+  color: inherit;
+}
+
+.mobile__available {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 140%;
+  text-align: left;
+  display: block;
+}
+
+.mobile__app-name {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+}

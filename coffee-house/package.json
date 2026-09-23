@@ -1,0 +1,14 @@
+{
+  "name": "coffee-house",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch menu.scss menu.css",
+    "style-1": "sass --watch index.scss index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
