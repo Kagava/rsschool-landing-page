@@ -319,7 +319,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/tea/moroccan.jpg"
   },
 
   {
@@ -354,7 +355,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/tea/ginger.jpg"
   },
 
   {
@@ -389,7 +391,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/tea/cranberry.jpg"
   },
 
   {
@@ -424,7 +427,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/tea/sea-buthorn.jpg"
   },
 
   {
@@ -459,7 +463,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/marble-cheesecake.jpg"
   },
 
   {
@@ -494,7 +499,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/red-velvet.jpg"
   },
 
   {
@@ -529,7 +535,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/cheesecakes.jpg"
   },
 
   {
@@ -564,7 +571,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/creme-brulee.jpg"
   },
 
   {
@@ -599,7 +607,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/pancakes.jpg"
   },
 
   {
@@ -634,7 +643,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/honey-cake.jpg"
   },
 
   {
@@ -669,7 +679,8 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/chocolate-cake.jpg"
   },
 
   {
@@ -704,6 +715,7 @@
         "name": "Jam",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/desserts/black-forest.jpg"
   }
 ]
