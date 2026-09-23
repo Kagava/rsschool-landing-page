@@ -149,7 +149,11 @@ function closeBackdrop() {
   modal.classList.remove("active");
 }
 
-backdrop.addEventListener("click", () => {
+backdrop.addEventListener("click", (e) => {
+  const target = e.target;
+  if (target.closest(".modal")) {
+    return;
+  }
   closeBackdrop();
 });
 
@@ -163,4 +167,52 @@ function fillModal(targetProduct) {
   modal.querySelector(".modal__heading").textContent = tartgeName;
   modal.querySelector(".modal__description").textContent =
     targetProduct.description;
+
+  const sizeContainer = modal.querySelector(".modal__size-container");
+  sizeContainer.innerHTML = "";
+  createSizes(sizeContainer, targetProduct.sizes);
+
+  const additivesContainer = modal.querySelector(".modal__additives-container");
+  additivesContainer.innerHTML = "";
+  createAdditives(additivesContainer, targetProduct.additives);
 }
+
+function createSizes(sizeContainer, sizes) {
+  for (let size in sizes) {
+    const newSize = document.createElement("div");
+    newSize.className = "modal__choose";
+    const sizeBadge = document.createElement("div");
+    sizeBadge.className = "modal__badge";
+    sizeBadge.textContent = size;
+    const sizeSize = document.createElement("div");
+    sizeSize.textContent = sizes[`${size}`].size;
+    newSize.dataset.price = sizes[`${size}`]["add-price"];
+    newSize.append(sizeBadge, sizeSize);
+    if (size === "s") {
+      newSize.classList.add("active");
+    }
+    newSize.addEventListener("click", modalChoose);
+    sizeContainer.append(newSize);
+  }
+}
+
+function createAdditives(additivesContainer, additives) {
+  for (let additive in additives) {
+    const newAdditive = document.createElement("div");
+    newAdditive.className = "modal__choose";
+    const additiveBadge = document.createElement("div");
+    additiveBadge.className = "modal__badge";
+    additiveBadge.textContent = additive;
+    const additiveValue = document.createElement("div");
+    additiveValue.textContent = additives[`${additive}`].name;
+    newAdditive.dataset.price = additives[`${additive}`]["add-price"];
+    newAdditive.append(additiveBadge, additiveValue);
+    if (additive === 0) {
+      newAdditive.classList.add("active");
+    }
+    newAdditive.addEventListener("click", modalChoose);
+    additivesContainer.append(newAdditive);
+  }
+}
+
+function modalChoose() {}

@@ -1,0 +1,140 @@
+@use "./constants" as const;
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal {
+  display: none;
+  background-color: green;
+  z-index: 3;
+  padding: 16px;
+  border-radius: 40px;
+  &.active {
+    display: flex;
+    flex-direction: row;
+  }
+  background-color: light-dark(const.$page-color, const.$dark-page-color);
+  color: light-dark(const.$primary-color, const.$dark-primary-color);
+}
+
+.modal__image {
+  display: flex;
+  width: 310px;
+  height: 310px;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 40px;
+}
+
+.modal__info {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.modal__heading,
+.modal__total-heading,
+.modal__price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 125%;
+}
+
+.modal__description,
+.modal__additives,
+.modal__size-heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.modal__warning-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid light-dark(const.$primary-color, const.$dark-primary-color);
+}
+
+.modal__warning-messange {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.modal__size-container,
+.modal__additives-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  font-weight: 600;
+}
+
+.modal__additives-block,
+.modal__sizes-block {
+  display: flex;
+  flex-direction: column;
+  column-gap: 8px;
+}
+
+.modal__heading-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.modal__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: light-dark(
+    const.$primary-bd-color,
+    const.$dark-primary-bd-color
+  );
+  border-radius: 50%;
+}
+
+.modal__choose {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  background-color: light-dark(const.$page-color, const.$container-color);
+  border: 1px solid light-dark(const.$primary-color, const.$dark-primary-color);
+  border-radius: 40px;
+  padding: 8px;
+  padding-right: 16px;
+  &.active {
+    background-color: light-dark(
+      const.$container-color,
+      const.$dark-page-color
+    );
+  }
+}
