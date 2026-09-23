@@ -836,6 +836,7 @@ body {
 
 .footer__link {
   cursor: pointer;
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
   width: 60px;

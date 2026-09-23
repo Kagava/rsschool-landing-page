@@ -124,6 +124,10 @@ $google-image--hovered: light-dark($google-dark, $google-light);
   }
 }
 
+.mobile__app-caption {
+  color: inherit;
+}
+
 .mobile__available {
   font-family: "Inter";
   font-style: normal;

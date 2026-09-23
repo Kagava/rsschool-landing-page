@@ -964,6 +964,10 @@ body {
   background-image: light-dark(url("imgs/svgs/mobile/google-dark.svg"), url("imgs/svgs/mobile/google-light.svg"));
 }
 
+.mobile__app-caption {
+  color: inherit;
+}
+
 .mobile__available {
   font-family: "Inter";
   font-style: normal;
@@ -1104,6 +1108,7 @@ body {
 
 .footer__link {
   cursor: pointer;
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
   width: 60px;
