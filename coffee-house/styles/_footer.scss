@@ -18,7 +18,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: auto;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 60px 100px;
   }
   @media (max-width: 455px) {
@@ -43,7 +43,7 @@
     font-style: italic;
     color: const.$accent-color;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     font-size: 3.2rem;
   }
 }
@@ -120,6 +120,7 @@
 
 .footer__link {
   cursor: pointer;
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
   width: 60px;

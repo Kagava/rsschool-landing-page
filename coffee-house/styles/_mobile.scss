@@ -45,7 +45,7 @@ $google-image--hovered: light-dark($google-dark, $google-light);
     font-style: italic;
     color: const.$accent-color;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     font-size: 3.2rem;
   }
 }
@@ -122,6 +122,10 @@ $google-image--hovered: light-dark($google-dark, $google-light);
       background-image: $google-image--hovered;
     }
   }
+}
+
+.mobile__app-caption {
+  color: inherit;
 }
 
 .mobile__available {
