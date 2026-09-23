@@ -675,7 +675,7 @@ body {
   color: light-dark(#403f3d, #e1d4c9);
 }
 
-.crad__heading {
+.card__heading {
   font-style: normal;
   font-weight: 600;
   font-size: 2.4rem;
