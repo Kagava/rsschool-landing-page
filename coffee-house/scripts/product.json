@@ -31,7 +31,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/irish-coffee.jpg"
   },
 
   {
@@ -66,7 +67,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/kahlua-coffee.jpg"
   },
 
   {
@@ -101,7 +103,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/honey-raf.jpg"
   },
 
   {
@@ -136,7 +139,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/ice-cappuccino.jpg"
   },
 
   {
@@ -171,7 +175,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/espresso.jpg"
   },
 
   {
@@ -206,7 +211,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/latte.jpg"
   },
 
   {
@@ -241,7 +247,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/latte-macchiato.jpg"
   },
 
   {
@@ -276,7 +283,8 @@
         "name": "Syrup",
         "add-price": "0.50"
       }
-    ]
+    ],
+    "image-addres": "imgs/menu/coffee/coffee-with-cognac.jpg"
   },
 
   {
