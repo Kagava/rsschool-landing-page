@@ -5,12 +5,18 @@ const body = document.body;
 const menuTags = document.querySelectorAll(".menu__tag");
 const cardsContainer = document.querySelector(".main__menu-container");
 const backdrop = document.querySelector(".backdrop");
+
 const modal = document.querySelector(".modal");
+const sizeContainer = modal.querySelector(".modal__size-container");
+const additivesContainer = modal.querySelector(".modal__additives-container");
+const modalPrice = document.querySelector(".modal__price");
+const modalCloseButton = document.querySelector(".modal__close-button");
 
 const coffeeArray = [];
 const teaArray = [];
 const dessertArray = [];
 
+let activePrice = 0;
 let activeTag = "coffee";
 
 getProducts().then((data) => {
@@ -168,13 +174,14 @@ function fillModal(targetProduct) {
   modal.querySelector(".modal__description").textContent =
     targetProduct.description;
 
-  const sizeContainer = modal.querySelector(".modal__size-container");
   sizeContainer.innerHTML = "";
   createSizes(sizeContainer, targetProduct.sizes);
 
-  const additivesContainer = modal.querySelector(".modal__additives-container");
   additivesContainer.innerHTML = "";
   createAdditives(additivesContainer, targetProduct.additives);
+
+  activePrice = Number(targetProduct.price);
+  createPrice();
 }
 
 function createSizes(sizeContainer, sizes) {
@@ -185,13 +192,13 @@ function createSizes(sizeContainer, sizes) {
     sizeBadge.className = "modal__badge";
     sizeBadge.textContent = size;
     const sizeSize = document.createElement("div");
+    sizeSize.className = "modal__value";
     sizeSize.textContent = sizes[`${size}`].size;
     newSize.dataset.price = sizes[`${size}`]["add-price"];
     newSize.append(sizeBadge, sizeSize);
     if (size === "s") {
       newSize.classList.add("active");
     }
-    newSize.addEventListener("click", modalChoose);
     sizeContainer.append(newSize);
   }
 }
@@ -204,15 +211,55 @@ function createAdditives(additivesContainer, additives) {
     additiveBadge.className = "modal__badge";
     additiveBadge.textContent = additive;
     const additiveValue = document.createElement("div");
+    additiveValue.className = "modal__value";
     additiveValue.textContent = additives[`${additive}`].name;
     newAdditive.dataset.price = additives[`${additive}`]["add-price"];
     newAdditive.append(additiveBadge, additiveValue);
     if (additive === 0) {
       newAdditive.classList.add("active");
     }
-    newAdditive.addEventListener("click", modalChoose);
     additivesContainer.append(newAdditive);
   }
 }
 
-function modalChoose() {}
+function createPrice() {
+  modalPrice.textContent = `$${activePrice}`;
+}
+
+sizeContainer.addEventListener("click", (e) => {
+  const target = e.target.closest(".modal__choose");
+  if (!target || target.classList.contains("active")) {
+    return;
+  }
+  const children = sizeContainer.querySelectorAll(".modal__choose");
+  children.forEach((item) => {
+    if (item.classList.contains("active")) {
+      activePrice -= Number(item.dataset.price);
+    }
+    item.classList.remove("active");
+  });
+  target.classList.add("active");
+  console.log(activePrice);
+  activePrice += Number(target.dataset.price);
+  console.log(activePrice);
+  createPrice();
+});
+
+additivesContainer.addEventListener("click", (e) => {
+  const target = e.target.closest(".modal__choose");
+  if (!target) {
+    return;
+  }
+  target.classList.toggle("active");
+  const priceModifaer = Number(target.dataset.price);
+  if (target.classList.contains("active")) {
+    activePrice += priceModifaer;
+  } else {
+    activePrice -= priceModifaer;
+  }
+  createPrice();
+});
+
+modalCloseButton.onclick = function () {
+  closeBackdrop();
+};
