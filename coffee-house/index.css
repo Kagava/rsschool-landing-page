@@ -738,6 +738,17 @@ body {
   background-color: black;
 }
 
+.slider-hidden {
+  overflow: hidden;
+}
+
+.row-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transition: all 0.5s ease-in-out;
+  width: clamp(348px, 26vw, 480px);
+}
+
 .about {
   margin-top: 100px;
 }
