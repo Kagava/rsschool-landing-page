@@ -34,6 +34,7 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo__link {
@@ -46,6 +47,28 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 .header__navigation-container {
   max-width: 500px;
   width: 100%;
+  @media (max-width: 768px) {
+    background-color: light-dark(const.$page-color, const.$dark-page-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    max-width: none;
+    top: 62px;
+    right: -16px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.3s ease-in-out;
+    &.burger--active {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
 }
 
 .header__navigation-list {
@@ -53,7 +76,7 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   flex-direction: row;
   justify-content: space-between;
   @media (max-width: 768px) {
-    display: none;
+    flex-direction: column;
   }
 }
 
@@ -177,9 +200,27 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 .burger__top-line {
   left: 12px;
   top: 17px;
+  transition:
+    transform 0.5s ease-in-out,
+    top 0.5s ease-in-out;
+  &.burger__cross {
+    transform: rotate(45deg);
+    top: 21px;
+  }
 }
 
 .burger__bottom-line {
   left: 12px;
   top: 25px;
+  transition:
+    transform 0.5s ease-in-out,
+    top 0.5s ease-in-out;
+  &.burger__cross {
+    top: 21px;
+    transform: rotate(-45deg);
+  }
+}
+
+.no-skroll {
+  overflow: hidden;
 }
