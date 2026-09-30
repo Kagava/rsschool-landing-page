@@ -63,6 +63,9 @@ $moon-icon: light-dark($moon-dark, $moon-light);
     opacity: 0;
     transform: scaleX(0);
     transform-origin: left;
+    &.no-transition {
+      transition: none !important;
+    }
     transition:
       transform 0.5s ease-in-out,
       opacity 0.3s ease-in-out;
