@@ -395,6 +395,8 @@ body {
   .header__navigation-container {
     background-color: light-dark(#e1d4c9, #292826);
     display: flex;
+    flex-direction: column;
+    gap: 100px;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -422,6 +424,8 @@ body {
 @media (max-width: 768px) {
   .header__navigation-list {
     flex-direction: column;
+    gap: 60px;
+    align-items: center;
   }
 }
 
@@ -436,6 +440,15 @@ body {
 }
 .header__navigation-link:hover {
   border-bottom-color: light-dark(#665f55, #c1b6ad);
+}
+@media (max-width: 768px) {
+  .header__navigation-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 125%;
+    text-align: center;
+  }
 }
 
 .header__themes,
@@ -493,6 +506,25 @@ body {
 }
 .header__menu-link:hover {
   border-bottom-color: light-dark(#665f55, #c1b6ad);
+}
+@media (max-width: 768px) {
+  .header__menu-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem !important;
+    line-height: 125%;
+    text-align: center;
+  }
+  .header__menu-link::after {
+    display: block;
+    width: 40px;
+    height: 40px;
+    content: "";
+    background-image: light-dark(url("imgs/svgs/header/coffee-cup.svg"), url("imgs/svgs/header/coffee-cup-dark.svg"));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .radio-light {
@@ -561,6 +593,15 @@ body {
 
 .no-skroll {
   overflow: hidden;
+}
+
+.header__menu-link-container-nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__menu-link-container-nav {
+    display: block;
+  }
 }
 
 .hero {

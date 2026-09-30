@@ -50,6 +50,8 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   @media (max-width: 768px) {
     background-color: light-dark(const.$page-color, const.$dark-page-color);
     display: flex;
+    flex-direction: column;
+    gap: 100px;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -77,6 +79,8 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   justify-content: space-between;
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 60px;
+    align-items: center;
   }
 }
 
@@ -90,6 +94,13 @@ $moon-icon: light-dark($moon-dark, $moon-light);
   border-bottom: 2px solid transparent;
   &:hover {
     border-bottom-color: $border-color;
+  }
+  @media (max-width: 768px) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 125%;
+    text-align: center;
   }
 }
 
@@ -152,6 +163,24 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 
   &:hover {
     border-bottom-color: $border-color;
+  }
+
+  @media (max-width: 768px) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem !important;
+    line-height: 125%;
+    text-align: center;
+    &::after {
+      display: block;
+      width: 40px;
+      height: 40px;
+      content: "";
+      background-image: $menu-logo;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -223,4 +252,12 @@ $moon-icon: light-dark($moon-dark, $moon-light);
 
 .no-skroll {
   overflow: hidden;
+}
+
+.header__menu-link-container-nav {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
